@@ -1,5 +1,9 @@
 - hosts: all
   tasks:
+  - name: Install EPEL
+    dnf:
+      state: present
+      name: epel-release
   - name: Install necessary dependencies
     dnf:
       state: present
